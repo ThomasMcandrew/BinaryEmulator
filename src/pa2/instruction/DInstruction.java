@@ -1,5 +1,7 @@
 package pa2.instruction;
 
+import pa2.utils.BinaryUtils;
+
 public abstract class DInstruction extends Instruction {
     protected int DT_adress, op, Rn, Rt;
     public DInstruction(String binary, String name, String opcode) {
@@ -14,6 +16,11 @@ public abstract class DInstruction extends Instruction {
         String opp = binary.substring(0,11);
         String dt = binary.substring(11,20);
         String oop = binary.substring(20,22);
+        String rn = binary.substring(22,27);
+        String rt = binary.substring(27,32);
+        opcode = opp;
+        DT_adress = BinaryUtils.parseBinary(dt);
+        op = BinaryUtils.parseBinary(opp);
 
     }
 }
