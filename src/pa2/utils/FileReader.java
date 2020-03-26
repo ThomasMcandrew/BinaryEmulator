@@ -9,7 +9,8 @@ public class FileReader {
     public static String[] readFile(String path) throws IOException {
         File file = new File(path);
         InputStream in = new FileInputStream(file);
-        byte[] bytes = in.readAllBytes();
+        byte[] bytes = new byte[(int)file.length()];
+        in.read(bytes);
         in.close();
         ArrayList<String> Instruction = new ArrayList<String>();
         String temp = "";
