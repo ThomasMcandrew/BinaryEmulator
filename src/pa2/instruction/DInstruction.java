@@ -20,7 +20,8 @@ public abstract class DInstruction extends Instruction {
         String rt = binary.substring(27,32);
         opcode = opp;
         DT_adress = BinaryUtils.parseBinary(dt);
-        op = BinaryUtils.parseBinary(opp);
-
+        op = BinaryUtils.parseBinary(oop);
+        Rn = BinaryUtils.parseBinary(rn);
+        Rt = BinaryUtils.parseBinary(rt);
     }
 }

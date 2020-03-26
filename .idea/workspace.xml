@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93114ad4-5441-41ae-aa50-1c2867466df2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pa2/instruction/BInstruction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pa2/instruction/DInstruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pa2/instruction/DInstruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pa2/utils/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pa2/utils/FileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585237938893</updated>
-      <workItem from="1585237942296" duration="12335000" />
+      <workItem from="1585237942296" duration="13877000" />
     </task>
     <servers />
   </component>
@@ -76,10 +76,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585250745759">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585253197434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1585250745759" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.305.1360.728@0.0.1920.1040" timestamp="1585253197434" />
     <state x="761" y="342" key="FileChooserDialogImpl" timestamp="1585251777194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
