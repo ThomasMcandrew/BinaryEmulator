@@ -3,7 +3,7 @@ package pa2.instruction;
 import pa2.utils.BinaryUtils;
 
 public abstract class DInstruction extends Instruction {
-    protected int DT_adress, op, Rn, Rt;
+    protected int DT_address, op, Rn, Rt;
     public DInstruction(String binary, String name, String opcode) {
         super(binary, name, opcode);
         if(binary != null){
@@ -19,7 +19,7 @@ public abstract class DInstruction extends Instruction {
         String rn = binary.substring(22,27);
         String rt = binary.substring(27,32);
         opcode = opp;
-        DT_adress = BinaryUtils.parseBinary(dt);
+        DT_address = BinaryUtils.parseBinary(dt);
         op = BinaryUtils.parseBinary(oop);
         Rn = BinaryUtils.parseBinary(rn);
         Rt = BinaryUtils.parseBinary(rt);
