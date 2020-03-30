@@ -3,7 +3,7 @@ package pa2.instruction;
 import pa2.utils.BinaryUtils;
 
 public abstract class CBInstruction extends Instruction {
-    protected int COND_BR_adress, Rt;
+    protected int COND_BR_address, Rt;
     public CBInstruction(String binary, String name, String opcode) {
         super(binary, name, opcode);
         if(binary != null){
@@ -18,7 +18,7 @@ public abstract class CBInstruction extends Instruction {
         String cond = binary.substring(8,27);
         String rt = binary.substring(27,32);
         opcode = op;
-        COND_BR_adress = BinaryUtils.parseBinary(cond);
+        COND_BR_address = BinaryUtils.parseBinary(cond);
         Rt = BinaryUtils.parseBinary(rt);
     }
 }
