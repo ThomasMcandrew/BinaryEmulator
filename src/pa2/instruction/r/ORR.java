@@ -1,24 +1,21 @@
 package pa2.instruction.r;
 
-import pa2.emu.Registers;
 import pa2.instruction.Instruction;
 import pa2.instruction.RInstruction;
 
-public class ADD extends RInstruction {
-
-
-    public ADD(String binary) {
-        super(binary, "ADD","10001011000");
+public class ORR extends RInstruction {
+    public ORR(String binary) {
+        super(binary, "ORR", "10101010000");
     }
 
     @Override
     public Instruction newInstruction(String binary) {
-        return new ADD(binary);
+        return new ORR(binary);
     }
 
     @Override
     public void execute() {
-        Registers.set(Rd,Registers.get(Rn) + Registers.get(Rm));
+
     }
 
     @Override

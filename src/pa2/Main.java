@@ -12,33 +12,26 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-//        System.out.println("foo");
-//        String[] foo = FileReader.readFile("fooo");
-//        for(int i = 0; i < foo.length;i++){
-//            System.out.println(foo[i]);
-//        }
-        String instr = "10001011000111110000001111111111";
-        System.out.println(instr.length());
-        Instruction foo = Instruction.findInstruction(instr);
-        System.out.println(foo.getInstruction());
-
-        String in2 = "10010001000000001000111111100000";
-        Instruction fum = IInstruction.findInstruction(in2);
-        System.out.println(fum.getInstruction());
 
 
 
-        //this code is for the real emulator
-        /*
-        String[] ins = FileReader.readFile("");
+
+
+
+        String[] ins = FileReader.readFile(FileReader.openFile());
+        //String[] ins = FileReader.readFile("C:\\Users\\thoma\\Desktop\\neww.legv8asm.machine");
         Instruction[] instructions = new Instruction[ins.length];
         for(int i = 0 ; i < ins.length;i++){
             instructions[i] = Instruction.findInstruction(ins[i]);
         }
-        for(int i = 0 ; i < ins.length;i++){
-            instructions[i].execute();
+        for(int i = 0 ; i < instructions.length;i++){
+            if(instructions[i] != null) {
+                System.out.println(instructions[i].getInstruction());
+            }else{
+                System.out.println("Fail on line " + i+1);
+            }
         }
-        */
+
 
 
     }

@@ -1,5 +1,8 @@
 package pa2.utils;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -8,6 +11,12 @@ public class FileReader {
 
     public static String[] readFile(String path) throws IOException {
         File file = new File(path);
+        return readFileHelper(file);
+    }
+    public static String[] readFile(File file) throws IOException {
+        return readFileHelper(file);
+    }
+    private static String[] readFileHelper(File file) throws IOException {
         InputStream in = new FileInputStream(file);
         byte[] bytes = new byte[(int)file.length()];//may need work
         in.read(bytes);
@@ -29,6 +38,17 @@ public class FileReader {
         }
         return val;
     }
-
+    public static File openFile(){
+            final JFileChooser fc = new JFileChooser();
+            fc.setMultiSelectionEnabled(false);
+            fc.addChoosableFileFilter(new FileNameExtensionFilter("ASSEMBLY","machine"));
+            fc.setAcceptAllFileFilterUsed(true);
+            int returnVal = fc.showOpenDialog(null);
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                File file = fc.getSelectedFile();
+                return file;
+            }
+            return null;
+            }
 
 }
