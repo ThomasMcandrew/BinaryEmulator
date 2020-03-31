@@ -22,6 +22,6 @@ public class LSR extends RInstruction {
 
     @Override
     public String getInstruction() {
-        return name + " " + Rd + " " + Rn + " #" + shamt;
+        return name + " X" + Rd + " X" + Rn + " #" + shamt;
     }
 }
