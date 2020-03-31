@@ -1,20 +1,11 @@
 package pa2;
 
-import pa2.instruction.IInstruction;
 import pa2.instruction.Instruction;
 import pa2.utils.FileReader;
-
 import java.io.IOException;
 
 public class Main {
-
-
-
-
     public static void main(String[] args) throws IOException {
-
-
-
 
 
 
