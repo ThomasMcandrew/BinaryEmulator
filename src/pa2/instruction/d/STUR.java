@@ -19,6 +19,6 @@ public class STUR extends DInstruction {
     }
     @Override
     public String getInstruction() {
-        return name + " X" + Rn + ", [X" + Rt + ", #" + DT_address + "]";
+        return name + " X" + Rt + ", [X" + Rn + ", #" + DT_address + "]";
     }
 }
