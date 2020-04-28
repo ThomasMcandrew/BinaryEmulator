@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 public class Main {
 
+	
+	public static int iterator;
+	
     public static void main(String[] args) throws IOException {
         
 
@@ -43,6 +46,9 @@ public class Main {
             }else{
                 System.out.println("Fail on line " + i+1);
             }
+        }
+        for(iterator = 0; iterator < instructions.length;iterator++) {
+        	instructions[iterator].execute();
         }
     }
 }
