@@ -1,5 +1,6 @@
 package pa2.instruction.b;
 
+import pa2.Main;
 import pa2.instruction.BInstruction;
 import pa2.instruction.Instruction;
 
@@ -16,7 +17,7 @@ public class B extends BInstruction {
 
     @Override
     public void execute() {
-
+        Main.iterator+=address;
     }
 
     @Override
