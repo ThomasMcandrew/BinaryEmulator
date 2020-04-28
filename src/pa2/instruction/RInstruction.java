@@ -21,10 +21,10 @@ public abstract class RInstruction extends Instruction  {
         String rn = binary.substring(22,27);
         String rd = binary.substring(27,32);
         opcode = op;
-        Rm = BinaryUtils.parseBinary(rm);
-        shamt = BinaryUtils.parseBinary(sham);
-        Rn = BinaryUtils.parseBinary(rn);
-        Rd = BinaryUtils.parseBinary(rd);
+        Rm = (int)BinaryUtils.parseBinary(rm);
+        shamt = (int)BinaryUtils.parseBinary(sham);
+        Rn = (int)BinaryUtils.parseBinary(rn);
+        Rd = (int)BinaryUtils.parseBinary(rd);
 
     }
 

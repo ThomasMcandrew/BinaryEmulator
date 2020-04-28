@@ -4,7 +4,8 @@ import pa2.utils.BinaryUtils;
 
 public  abstract class IInstruction extends Instruction {
 
-    protected int immediate,Rn,Rd;
+    protected long immediate;
+    protected int Rn,Rd;
 
     public IInstruction(String binary,String name,String opcode) {
         super(binary, name,opcode);
@@ -22,7 +23,7 @@ public  abstract class IInstruction extends Instruction {
         String rd = binary.substring(27,32);
         opcode = op;
         immediate = BinaryUtils.parseBinary(imm);
-        Rn = BinaryUtils.parseBinary(rn);
-        Rd = BinaryUtils.parseBinary(rd);
+        Rn = (int)BinaryUtils.parseBinary(rn);
+        Rd = (int)BinaryUtils.parseBinary(rd);
     }
 }

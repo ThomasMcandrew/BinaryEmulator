@@ -16,6 +16,6 @@ public abstract class BInstruction extends Instruction {
         String op = binary.substring(0,6);
         String ad = binary.substring(6,32);
         opcode = op;
-        address = BinaryUtils.parseBinary(ad);
+        address = (int)BinaryUtils.parseBinary(ad);
     }
 }

@@ -4,39 +4,39 @@ public class Registers {
 
 
 
-    private static int X0;
-    private static int X1;
-    private static int X2;
-    private static int X3;
-    private static int X4;
-    private static int X5;
-    private static int X6;
-    private static int X7;
-    private static int X8;
-    private static int X9;
-    private static int X10;
-    private static int X11;
-    private static int X12;
-    private static int X13;
-    private static int X14;
-    private static int X15;
-    private static int X16;
-    private static int X17;
-    private static int X18;
-    private static int X19;
-    private static int X20;
-    private static int X21;
-    private static int X22;
-    private static int X23;
-    private static int X24;
-    private static int X25;
-    private static int X26;
-    private static int X27;
-    private static int X28;
-    private static int X29;
-    private static int X30;
-    private static int X31 = 0;
-    public static int get(int reg){
+    private static long X0;
+    private static long X1;
+    private static long X2;
+    private static long X3;
+    private static long X4;
+    private static long X5;
+    private static long X6;
+    private static long X7;
+    private static long X8;
+    private static long X9;
+    private static long X10;
+    private static long X11;
+    private static long X12;
+    private static long X13;
+    private static long X14;
+    private static long X15;
+    private static long X16;
+    private static long X17;
+    private static long X18;
+    private static long X19;
+    private static long X20;
+    private static long X21;
+    private static long X22;
+    private static long X23;
+    private static long X24;
+    private static long X25;
+    private static long X26;
+    private static long X27;
+    private static long X28;
+    private static long X29;
+    private static long X30;
+    private static long X31 = 0;
+    public static long get(int reg){
         switch (reg){
             case 0:
                 return X0;
@@ -107,7 +107,7 @@ public class Registers {
         }
         return 0;
     }
-    public static void set(int reg, int val){
+    public static void set(int reg, long val){
         switch (reg){
             case 0:
                 X0 = val;

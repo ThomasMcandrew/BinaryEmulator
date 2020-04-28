@@ -17,7 +17,7 @@ public abstract class IWInstruction extends Instruction {
         String mov = binary.substring(11,27);
         String rd = binary.substring(27,32);
         opcode = op;
-        MOV_Immediate = BinaryUtils.parseBinary(mov);
-        Rd = BinaryUtils.parseBinary(rd);
+        MOV_Immediate = (int)BinaryUtils.parseBinary(mov);
+        Rd = (int)BinaryUtils.parseBinary(rd);
     }
 }
