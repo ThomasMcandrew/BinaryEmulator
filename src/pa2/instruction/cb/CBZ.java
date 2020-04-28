@@ -1,5 +1,6 @@
 package pa2.instruction.cb;
 
+import pa2.Main;
 import pa2.instruction.CBInstruction;
 import pa2.instruction.Instruction;
 
@@ -16,7 +17,10 @@ public class CBZ extends CBInstruction {
 
     @Override
     public void execute() {
-
+        if(Rt==0)
+        {
+            Main.iterator+=COND_BR_address;
+        }
     }
 
     @Override
