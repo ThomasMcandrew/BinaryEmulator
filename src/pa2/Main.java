@@ -36,7 +36,12 @@ public class Main {
                     ins = null;
                 }
             }else if(input.contains("2")) {
+            	try {
                 ins = FileReader.readFile(FileReader.openFile());
+            	}catch(FileNotFoundException e) {
+                    System.out.println("File does not exist");
+                    ins = null;
+                }
             }
         }
         scan.close();
@@ -51,16 +56,16 @@ public class Main {
         printInstruction(instructions);
         for(iterator = 0; iterator < instructions.length;iterator++) {
         	try {
-        	System.out.println(iterator);
+        	//System.out.println(iterator);
         	instructions[iterator].execute();
-        	printRegisters();
+        	//printRegisters();
         	}catch(Exception e) {
         		printInstructionFail(instructions);
         	}
         }
 
         printRegisters();
-        Memory.print();
+        //Memory.print();
     }
     
     public static void printInstruction(Instruction[] instructions) {

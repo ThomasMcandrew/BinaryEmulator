@@ -19,7 +19,7 @@ public class BR extends RInstruction {
 
     @Override
     public void execute() {
-        Main.iterator=(int)Registers.get(Rn);
+        Main.iterator=(int)Registers.get(Rn)-1;
     }
 
     @Override
