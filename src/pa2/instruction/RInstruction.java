@@ -25,7 +25,5 @@ public abstract class RInstruction extends Instruction  {
         shamt = (int)BinaryUtils.parseBinary(sham);
         Rn = (int)BinaryUtils.parseBinary(rn);
         Rd = (int)BinaryUtils.parseBinary(rd);
-
     }
-
 }

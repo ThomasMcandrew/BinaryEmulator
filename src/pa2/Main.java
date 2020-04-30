@@ -1,5 +1,7 @@
 package pa2;
 
+import pa2.emu.Memory;
+import pa2.emu.Stack;
 import pa2.instruction.Instruction;
 import pa2.utils.FileReader;
 
@@ -14,7 +16,20 @@ public class Main {
 	
     public static void main(String[] args) throws IOException {
         
-
+    	Memory.init();
+    	Stack.init();
+    	
+    	
+//    	//Memory.print();
+//    	//System.out.println("\n\n\n\n\n\n\n\n");
+//    	long in = 0x0FFFFFFFFFFFFFFFL;
+//    	in = 44455L;
+//
+//    	Memory.store(in, 0);
+//    	Memory.print();
+//    	System.out.println(Memory.read(0));
+//    	System.exit(0);
+    	
         Scanner scan = new Scanner(System.in);
         String[] ins = null;
 

@@ -2,8 +2,6 @@ package pa2.emu;
 
 public class Registers {
 
-
-
     private static long X0;
     private static long X1;
     private static long X2;
