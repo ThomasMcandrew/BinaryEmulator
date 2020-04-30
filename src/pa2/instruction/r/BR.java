@@ -1,5 +1,6 @@
 package pa2.instruction.r;
 
+import pa2.Main;
 import pa2.instruction.Instruction;
 import pa2.instruction.RInstruction;
 
@@ -17,7 +18,7 @@ public class BR extends RInstruction {
 
     @Override
     public void execute() {
-
+        Main.iterator=Rn;
     }
 
     @Override
