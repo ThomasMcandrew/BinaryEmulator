@@ -18,7 +18,7 @@ public abstract class CBInstruction extends Instruction {
         String cond = binary.substring(8,27);
         String rt = binary.substring(27,32);
         opcode = op;
-        COND_BR_address = (int)BinaryUtils.parseBinary(cond);
+        COND_BR_address = (int)BinaryUtils.parseBinaryBranch(cond);
         Rt =(int)BinaryUtils.parseBinary(rt);
     }
 }
