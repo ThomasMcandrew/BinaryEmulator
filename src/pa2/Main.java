@@ -51,13 +51,16 @@ public class Main {
         printInstruction(instructions);
         for(iterator = 0; iterator < instructions.length;iterator++) {
         	try {
+        	System.out.println(iterator);
         	instructions[iterator].execute();
+        	printRegisters();
         	}catch(Exception e) {
         		printInstructionFail(instructions);
         	}
         }
 
         printRegisters();
+        Memory.print();
     }
     
     public static void printInstruction(Instruction[] instructions) {
@@ -85,7 +88,7 @@ public class Main {
     public static void printRegisters() {
         for (int i=0 ; i<32 ; i++)
         {
-            System.out.println("X" + i + ": " + Integer.toHexString((int)Registers.get(i)));
+            System.out.println("X" + i + "h: " + Integer.toHexString((int)Registers.get(i)) + " d:" + (int)Registers.get(i));
         }
     }
     
