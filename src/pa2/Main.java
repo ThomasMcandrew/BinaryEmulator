@@ -55,15 +55,36 @@ public class Main {
         for(int i = 0 ; i < ins.length;i++){
             instructions[i] = Instruction.findInstruction(ins[i]);
         }
-        for(int i = 0 ; i < instructions.length;i++){
+        printInstruction(instructions);
+        for(iterator = 0; iterator < instructions.length;iterator++) {
+        	try {
+        	instructions[iterator].execute();
+        	}catch(Exception e) {
+        		printInstructionFail(instructions);
+        	}
+        }
+    }
+    
+    public static void printInstruction(Instruction[] instructions) {
+    	for(int i = 0 ; i < instructions.length;i++){
             if(instructions[i] != null) {
                 System.out.println(instructions[i].getInstruction());
             }else{
                 System.out.println("Fail on line " + i+1);
             }
         }
-        for(iterator = 0; iterator < instructions.length;iterator++) {
-        	instructions[iterator].execute();
+    }
+    public static void printInstructionFail(Instruction[] instructions) {
+    	for(int i = 0 ; i < instructions.length;i++){
+            if(instructions[i] != null) {
+            	if(i == iterator) {
+            		System.out.print("--->");
+            	}
+                System.out.println(instructions[i].getInstruction());
+            }else{
+                System.out.println("Fail on line " + i+1);
+            }
         }
     }
+    
 }

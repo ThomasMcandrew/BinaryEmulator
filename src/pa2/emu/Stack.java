@@ -42,13 +42,37 @@ public class Stack {
     }
     public static void print() {
     	for(int i = 0; i < stack.length;i++) {
-    		System.out.print(String.format("%8s", Integer.toBinaryString(stack[i] & 0xFF)).replace(' ', '0') + " ");
+    		System.out.print(String.format("%02x", stack[i]) + " ");
     		i++;
-    		System.out.print(String.format("%8s", Integer.toBinaryString(stack[i] & 0xFF)).replace(' ', '0') + " ");
+    		System.out.print(String.format("%02x", stack[i]) + " ");
     		i++;
-    		System.out.print(String.format("%8s", Integer.toBinaryString(stack[i] & 0xFF)).replace(' ', '0') + " ");
+    		System.out.print(String.format("%02x", stack[i]) + " ");
     		i++;
-    		System.out.println(String.format("%8s", Integer.toBinaryString(stack[i] & 0xFF)).replace(' ', '0'));
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + "  ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", stack[i]) + " ");
+    		i++;
+    		System.out.println(String.format("%02x", stack[i]) + " ");
     	}
     }
 }

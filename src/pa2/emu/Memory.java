@@ -45,13 +45,38 @@ public class Memory {
     }
     public static void print() {
     	for(int i = 0; i < memory.length;i++) {
-    		System.out.print(String.format("%8s", Integer.toBinaryString(memory[i] & 0xFF)).replace(' ', '0') + " ");
+    		System.out.print(String.format("%02x", memory[i]) + " ");
     		i++;
-    		System.out.print(String.format("%8s", Integer.toBinaryString(memory[i] & 0xFF)).replace(' ', '0') + " ");
+    		System.out.print(String.format("%02x", memory[i]) + " ");
     		i++;
-    		System.out.print(String.format("%8s", Integer.toBinaryString(memory[i] & 0xFF)).replace(' ', '0') + " ");
+    		System.out.print(String.format("%02x", memory[i]) + " ");
     		i++;
-    		System.out.println(String.format("%8s", Integer.toBinaryString(memory[i] & 0xFF)).replace(' ', '0'));
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + "  ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.print(String.format("%02x", memory[i]) + " ");
+    		i++;
+    		System.out.println(String.format("%02x", memory[i]) + " ");
+    	
     	}
     }
     

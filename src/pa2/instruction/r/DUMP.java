@@ -1,5 +1,7 @@
 package pa2.instruction.r;
 
+import pa2.emu.Memory;
+import pa2.emu.Stack;
 import pa2.instruction.Instruction;
 import pa2.instruction.RInstruction;
 
@@ -16,7 +18,11 @@ public class DUMP extends RInstruction {
 
     @Override
     public void execute() {
-
+    	System.out.println("______Stack______");
+    	Stack.print();
+    	System.out.println("_____Memory______");
+    	Memory.print();
+    	
     }
 
     @Override

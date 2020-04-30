@@ -1,5 +1,6 @@
 package pa2.instruction.r;
 
+import pa2.emu.Registers;
 import pa2.instruction.Instruction;
 import pa2.instruction.RInstruction;
 
@@ -15,7 +16,7 @@ public class PRNT extends RInstruction {
 
     @Override
     public void execute() {
-
+    	System.out.println("X" + Rd + "  " + Integer.toHexString((int)Registers.get(Rd)) + " " + Registers.get(Rd));
     }
 
     @Override
