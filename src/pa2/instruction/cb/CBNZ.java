@@ -1,6 +1,7 @@
 package pa2.instruction.cb;
 
 import pa2.Main;
+import pa2.emu.Registers;
 import pa2.instruction.CBInstruction;
 import pa2.instruction.Instruction;
 
@@ -18,7 +19,7 @@ public class CBNZ extends CBInstruction {
 
     @Override
     public void execute() {
-            if(Rt!=0)
+            if(Registers.get(Rt)!=0)
             {
                 Main.iterator+=COND_BR_address;
             }

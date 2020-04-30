@@ -85,7 +85,7 @@ public class Main {
     public static void printRegisters() {
         for (int i=0 ; i<32 ; i++)
         {
-            System.out.println("X" + i + ": " + Registers.get(i));
+            System.out.println("X" + i + ": " + Integer.toHexString((int)Registers.get(i)));
         }
     }
     

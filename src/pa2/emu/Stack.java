@@ -16,7 +16,7 @@ public class Stack {
     	byte six = (byte) ((i >> 16) & 0xFF);
     	byte seven = (byte) ((i >> 8) & 0xFF);
     	byte eight = (byte) ((i >> 0) & 0xFF);
-    	int start = adress/8;
+    	int start = adress;
     	stack[start] = one;
     	start++;
     	stack[start] = two;
@@ -35,7 +35,7 @@ public class Stack {
     }
     public static long read(int adress) {
     	String num = "";
-    	for(int i = adress/8;i < (adress/8)+8;i++) {
+    	for(int i = adress;i < (adress)+8;i++) {
     		num += String.format("%8s", Integer.toBinaryString(stack[i] & 0xFF)).replace(' ', '0');
     	}
     	return BinaryUtils.parseBinary(num);
