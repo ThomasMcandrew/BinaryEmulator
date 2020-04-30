@@ -1,5 +1,7 @@
 package pa2.instruction.r;
 
+import pa2.emu.ConditionBits;
+import pa2.emu.Registers;
 import pa2.instruction.Instruction;
 import pa2.instruction.RInstruction;
 
@@ -15,7 +17,8 @@ public class SUBS extends RInstruction {
 
     @Override
     public void execute() {
-
+        Registers.set(Rd,(Registers.get(Rn)-Registers.get(Rm)));
+        ConditionBits.set((Registers.get(Rn)-Registers.get(Rm)));
     }
 
     @Override

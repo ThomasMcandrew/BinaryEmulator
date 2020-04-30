@@ -1,5 +1,6 @@
 package pa2.instruction.d;
 
+import pa2.emu.Registers;
 import pa2.instruction.DInstruction;
 import pa2.instruction.Instruction;
 

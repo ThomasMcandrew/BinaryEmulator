@@ -1,5 +1,7 @@
 package pa2.instruction.i;
 
+import pa2.emu.ConditionBits;
+import pa2.emu.Registers;
 import pa2.instruction.IInstruction;
 import pa2.instruction.Instruction;
 
@@ -15,7 +17,8 @@ public class SUBIS extends IInstruction {
 
     @Override
     public void execute() {
-
+        Registers.set(Rd,Registers.get(Rn) - immediate);
+        ConditionBits.set(Registers.get(Rn) - immediate);
     }
 
     @Override

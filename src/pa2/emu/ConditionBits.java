@@ -16,7 +16,7 @@ public class ConditionBits {
     private static boolean VC;
     private static boolean VS;
 
-    public static void set(int S){
+    public static void set(long S){
         EQ = S == 0;
         GE = S >= 0;
         GT = S > 0;
