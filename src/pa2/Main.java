@@ -1,6 +1,7 @@
 package pa2;
 
 import pa2.emu.Memory;
+import pa2.emu.Registers;
 import pa2.emu.Stack;
 import pa2.instruction.Instruction;
 import pa2.utils.FileReader;
@@ -40,6 +41,8 @@ public class Main {
         }
         scan.close();
 
+        printRegisters();
+
         //String[] ins = FileReader.readFile("C:\\Users\\thoma\\Desktop\\neww.legv8asm.machine");
         Instruction[] instructions = new Instruction[ins.length];
         for(int i = 0 ; i < ins.length;i++){
@@ -53,6 +56,8 @@ public class Main {
         		printInstructionFail(instructions);
         	}
         }
+
+        printRegisters();
     }
     
     public static void printInstruction(Instruction[] instructions) {
@@ -74,6 +79,13 @@ public class Main {
             }else{
                 System.out.println("Fail on line " + i+1);
             }
+        }
+    }
+
+    public static void printRegisters() {
+        for (int i=0 ; i<32 ; i++)
+        {
+            System.out.println("X" + i + ": " + Registers.get(i));
         }
     }
     
