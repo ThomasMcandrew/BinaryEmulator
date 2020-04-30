@@ -1,5 +1,7 @@
 package pa2.instruction.cb;
 
+import pa2.Main;
+import pa2.emu.ConditionBits;
 import pa2.instruction.CBInstruction;
 import pa2.instruction.Instruction;
 
@@ -16,6 +18,10 @@ public class Bcond extends CBInstruction {
 
     @Override
     public void execute() {
+        if(ConditionBits.get(Rt))
+        {
+            Main.iterator+=COND_BR_address;
+        }
 
     }
 
