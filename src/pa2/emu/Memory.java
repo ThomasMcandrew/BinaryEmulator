@@ -35,9 +35,9 @@ public class Memory {
     	start++;
     	memory[start] = eight;
     }
-    public static long read(int adress) {
+    public static long read(int address) {
     	String num = "";
-    	for(int i = adress;i < (adress)+8;i++) {
+    	for(int i = address;i < (address)+8;i++) {
     		num += String.format("%8s", Integer.toBinaryString(memory[i] & 0xFF)).replace(' ', '0');
     	}
     	return BinaryUtils.parseBinary(num);
