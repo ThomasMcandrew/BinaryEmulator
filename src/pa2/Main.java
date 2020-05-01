@@ -19,7 +19,8 @@ public class Main {
         
     	Memory.init();
     	Stack.init();
-    	
+    	Registers.set(28, 512L);
+    	Registers.set(29, 512);
     	
         Scanner scan = new Scanner(System.in);
         String[] ins = null;
@@ -36,12 +37,7 @@ public class Main {
                     ins = null;
                 }
             }else if(input.contains("2")) {
-            	try {
                 ins = FileReader.readFile(FileReader.openFile());
-            	}catch(FileNotFoundException e) {
-                    System.out.println("File does not exist");
-                    ins = null;
-                }
             }
         }
         scan.close();

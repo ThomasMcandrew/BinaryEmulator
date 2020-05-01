@@ -40,9 +40,12 @@ public class FileReader {
     }
     public static File openFile(){
             final JFileChooser fc = new JFileChooser();
+            //fc.setLocation(100, 100);
             fc.setMultiSelectionEnabled(false);
             fc.addChoosableFileFilter(new FileNameExtensionFilter("ASSEMBLY","machine"));
             fc.setAcceptAllFileFilterUsed(true);
+            fc.requestFocusInWindow();
+            fc.requestFocus();
             int returnVal = fc.showOpenDialog(null);
             if(returnVal == JFileChooser.APPROVE_OPTION) {
                 File file = fc.getSelectedFile();
